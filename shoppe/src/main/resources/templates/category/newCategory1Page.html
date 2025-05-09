@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>新增畫面</title>
+</head>
+<body>
+<!-- <div th:replace="~{layout/navbar}"></div> -->
+<h1>新增一級分類</h1>
+
+<form th:action="@{/category1/addPost}" method="post">
+ 
+  <label for="name">一級分類名稱</label>
+  <input type="text" name="category1Name" id="name" required />
+  <br>
+  <input type="submit" value="送出" />
+</form>
+
+<div>[[${okMsg}]]</div>
+</body>
+</html>

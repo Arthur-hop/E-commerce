@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>編輯畫面</title>
+</head>
+<body>
+<!-- <div th:replace="~{layout/navbar}"></div> -->
+<h1>編輯角色資料</h1>
+
+<form th:object="${role}" th:action="@{/role/updatePost}" method="post">
+ 
+ <input th:field="*{id}" type="hidden" />
+  <input th:field="*{name}" />
+  <br>
+
+ <input type="submit" value="送出" />
+</form>
+
+</body>
+</html>
